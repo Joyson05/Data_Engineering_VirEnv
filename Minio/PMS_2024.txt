@@ -1,0 +1,27 @@
+Business
+
+I developed a PowerBI dashboard utilizing Salesforce data to provide detailed insights into project opportunity positions. I enhanced the design of the dashboard for improved usability. Additionally, I actively participated in all client demos, ensuring the smooth setup of the environment for presentation purposes. I also created user guide videos for the dashboard, facilitating user understanding and adoption. Furthermore, I provided ongoing support to the team whenever needed. I provided support to the team during urgent times by assisting with resume preparation. I made myself available whenever needed, ensuring that I was there to lend a hand and support my colleagues in any capacity required.
+
+Project Execution
+
+I have often submitted my work on time, never missing a deadline. I maintained frequent communication with the leads and managers I worked with, guaranteeing that every project was finished according to plan. Furthermore, I took the responsibility of teaching PowerBI, effectively leading all training sessions and offering participants assignments and datasets to boost their expertise. Additionally, I remained easily reachable to address my managers' needs promptly and report back without any delay.
+
+
+New ideas
+
+I explored into new technologies such as Microsoft Azure and AWS to enhance my data analysis capabilities. One notable achievement was establishing a streaming data pipeline to collect data from Raspberry Pi devices and transmit it to Microsoft Azure. From there, I seamlessly integrated the data with PowerBI for visualization purposes. Furthermore, I expanded my expertise in data analysis on AWS through Udemy courses, gaining valuable insights into cloud computing. I successfully completed certification in this field, solidifying my knowledge and skills in cloud-based data analysis.
+
+
+Innovative Ideas
+
+Had a innovative idea of implementing automated email triggering on opportunities which are exceeding the target days in salesforce data using power automate and powerbi. Explored lot of features on powerbi. 
+
+
+upskilling
+
+
+I significantly upskilled in cloud-based data analysis, focusing on AWS. I acquired knowledge of various services utilized for data ETL and analysis purposes, including Kinesis Data Streams and Firehose for data collection. Additionally, I learned how to utilize AWS Lambda for coding tasks and explored numerous other services tailored for data analysis. I completed a certificate course on AWS through Udemy, and I also passed an exam with a commendable score. Furthermore, I gained proficiency in IAM policies and roles, recognizing their substantial role within AWS. Additionally, I delved into the Advanced PowerBI service, enabling database refresh automation.
+
+
+
+

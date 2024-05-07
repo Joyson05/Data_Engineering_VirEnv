@@ -1,0 +1,51 @@
+
+-------creating mysql in ubuntu aws ec2 instance------------
+
+# sudo apt update
+
+# sudo apt install mysql-server
+
+# sudo systemctl start mysql.service
+
+# sudo systemctl status mysql.service
+
+# sudo mysql
+
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin@123';
+
+# exit
+
+
+# mysql -u root -p
+
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+
+# exit;
+
+# sudo mysql
+
+# CREATE USER 'dataanalyse'@'%' IDENTIFIED BY 'data@555';
+
+#  SELECT user, host FROM mysql.user;
+
+# GRANT ALL PRIVILEGES ON * . * TO 'dataanalyse'@'localhost';
+
+# EXIT
+
+
+CREATE USER 'dataanalyse'@'%' IDENTIFIED BY 'data@555';
+
+
+GRANT ALL PRIVILEGES ON joydemo.* TO 'dataanalyse'@'%';
+
+
+-----To connect db to vs code--------------
+
+#Install a extention called "MYSQL SHELL FOR VS CODE" in vs code
+
+#Give credentials like
+
+    username: dataanalyse
+    password: data@555
+    ip address: (ex: 35:777:333:99)
+    
