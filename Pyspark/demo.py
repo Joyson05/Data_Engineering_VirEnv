@@ -1,74 +1,47 @@
-import boto3
-from boto3 import client
-import json
 from pyspark.sql import SparkSession
+import json
 import os
 import sys
-
 os.environ['PYSPARK_PYTHON'] = sys.executable #Python worker 
 os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable #Python driver
 
-try:
-    # Initialize SparkSession
-    spark = SparkSession.builder \
-        .appName("LogDataToDataFrame") \
-        .getOrCreate()
-        
-    # AWS credentials
-    aws_access_key_id = 'AKIAU6GDWNO4FL3DSEF5'
-    aws_secret_access_key = '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'
-    region_name = 'ap-south-1'
-    bucket_name = 'demo-bucket-joy'
+# Initialize SparkSession
+spark = SparkSession.builder \
+    .appName("ReadLogsToDataFrame") \
+    .getOrCreate()
 
-    s3_client = boto3.client('s3',
-                            aws_access_key_id=aws_access_key_id,
-                            aws_secret_access_key=aws_secret_access_key,
-                            region_name=region_name)
+# Path to the folder containing log files
+folder_path = r'D:\Data_Engineering_VirEnv\Java_Microservices_Logs\demoauth'
 
+# List all log files in the folder
+log_files = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.endswith('.log')]
 
-    # Get list objects in the S3 bucket
-    response = s3_client.list_objects_v2(Bucket=bucket_name, Prefix='json_files/')
-    #print(response)
-    # iterate over names
-    for i in response.get("Contents",None):
-        print(i.get("Key",None))
-    # Retrieve JSON file objects
-    json_files = []
-    for obj in response.get('Contents', []):
-        key = obj['Key']
-        #print("key",key)
-        if key.endswith('.log'):
-            json_files.append(key)
-    #print(json_files)
+# Initialize an empty list to store RDDs
+parsed_logs_rdds = []
 
-
-    for file_key in json_files:
-        response = s3_client.get_object(Bucket=bucket_name, Key=file_key)
-        json_content = response['Body'].read().decode('utf-8')
-        # print(f"Contents of '{file_key}':")
-        # print(type(json_content))
-        
-    json_list=[]        
-    for line in json_content.strip().split('\n'):
-        json_list.append(json.loads(line))
-
-    # Create PySpark DataFrame from the list of dictionaries
-    df = spark.createDataFrame(json_list)
-
-    # Show DataFrame schema and sample data
-    df.printSchema()
-    df.show()
-
-    # Stop SparkSession
-    spark.stop()
+# Process each log file
+for log_file in log_files:
+    # Read log file as text file
+    log_data = spark.sparkContext.textFile(log_file)
     
-except Exception as e:
-    # Handle specific exception related to ShutdownHookManager
-    if 'ShutdownHookManager' in str(e):
-        print("Error occurred in ShutdownHookManager. Ignoring...")
-    else:
-        # Handle other exceptions
-        print("An error occurred:", e)
+    # Parse each line as JSON
+    parsed_logs = log_data.map(lambda line: json.loads(line))
+    
+    print(f"Contents of parsed RDD for file {log_file}:")
+    print(parsed_logs.collect())  # Collect and print all elements
+    # Append parsed RDD to the list
+    parsed_logs_rdds.append(parsed_logs)
 
+# Union all RDDs
+all_logs_rdd = spark.sparkContext.union(parsed_logs_rdds)
+print("unioned data", all_logs_rdd.collect())
 
+# Create DataFrame from parsed JSON data
+df = spark.createDataFrame(all_logs_rdd)
 
+# Show DataFrame schema and sample data
+df.printSchema()
+df.show()
+
+# Stop SparkSession
+spark.stop()

@@ -1,0 +1,2 @@
+{"@timestamp":"2024-04-22T15:20:10.912Z","@version":"1","message":"Starting AuthApplication v0.0.1-SNAPSHOT using Java 11.0.22 on auth-java-deployment-dtd-65c74f797f-c2hks with PID 1 (/opt/app/app.jar started by root in /opt/app)","logger_name":"com.dtd.auth.AuthApplication","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2024-04-22T15:20:10.933Z","@version":"1","message":"Running with Spring Boot v2.7.0, Spring v5.3.20","logger_name":"com.dtd.auth.AuthApplication","thread_name":"main","level":"DEBUG","level_value":10000}

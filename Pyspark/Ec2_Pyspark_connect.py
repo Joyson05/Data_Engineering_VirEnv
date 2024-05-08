@@ -1,31 +1,47 @@
-import boto3
-import json
 from pyspark.sql import SparkSession
+import json
 import os
 import sys
-import pandas as pd
-
 os.environ['PYSPARK_PYTHON'] = sys.executable #Python worker 
 os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable #Python driver
 
-# spark = SparkSession.builder \
-#     .appName("S3 Data Retrieval") \
-#     .getOrCreate()
-    
+# Initialize SparkSession
+spark = SparkSession.builder \
+    .appName("ReadLogsToDataFrame") \
+    .getOrCreate()
 
+# Path to the folder containing log files
 folder_path = r'D:\Data_Engineering_VirEnv\Java_Microservices_Logs\demoauth'
-json_files = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.endswith('.log')]
 
-print(json_files)
-df = pd.read_json(json_files, lines=True)
+# List all log files in the folder
+log_files = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.endswith('.log')]
 
-df=spark.createDataFrame(df)
+# Initialize an empty list to store RDDs
+parsed_logs_rdds = []
 
-# data = spark.read.text(r"D:\Data_Engineering_VirEnv\Java_Microservices_Logs\authService\authService.2024-04-16.0.log")
+# Process each log file
+for log_file in log_files:
+    # Read log file as text file
+    log_data = spark.sparkContext.textFile(log_file)
+    
+    # Parse each line as JSON
+    parsed_logs = log_data.map(lambda line: json.loads(line))
+    
+    print(f"Contents of parsed RDD for file {log_file}:")
+    print(parsed_logs.collect())  # Collect and print all elements
+    # Append parsed RDD to the list
+    parsed_logs_rdds.append(parsed_logs)
 
+# Union all RDDs
+all_logs_rdd = spark.sparkContext.union(parsed_logs_rdds)
+print("unioned data", all_logs_rdd.collect())
 
-# # Process the data
-# data.show()
+# Create DataFrame from parsed JSON data
+df = spark.createDataFrame(all_logs_rdd)
 
-# # Stop SparkSession
-# spark.stop()
+# Show DataFrame schema and sample data
+df.printSchema()
+df.show()
+
+# Stop SparkSession
+spark.stop()
