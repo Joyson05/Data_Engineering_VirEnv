@@ -47,5 +47,10 @@ GRANT ALL PRIVILEGES ON joydemo.* TO 'dataanalyse'@'%';
 
     username: dataanalyse
     password: data@555
-    ip address: (ex: 35:777:333:99)
+    ip address: (ex: 35:777:333:99) port 3306 default
+
+----------# making ip address static-----------
+
+1, Go to "Elastic ip address" service and vlick allocate ip address and click allocate
+2, then click the created ip and go inside, then click "assosiate elastic ip address", then give the instance name.
     
