@@ -36,7 +36,7 @@ try:
 
     # Union all RDDs
     all_logs_rdd = spark.sparkContext.union(parsed_logs_rdds)
-    print("unioned data", all_logs_rdd.collect())
+    #print("unioned data", all_logs_rdd.collect())
 
     # Create DataFrame from parsed JSON data
     df = spark.createDataFrame(all_logs_rdd)

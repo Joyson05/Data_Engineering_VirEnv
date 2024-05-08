@@ -1,0 +1,9 @@
+ec2 folder creation.
+
+#To create folder - give sudo always
+sudo mkdir backup_files
+sudo mkdir main_files
+
+#Give permission 
+sudo chmod 777 file_name ---- 777(read, write, execute), 077(no read, write, ececute)
+
