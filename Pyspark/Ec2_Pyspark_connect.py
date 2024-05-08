@@ -6,7 +6,7 @@ import sys
 os.environ['PYSPARK_PYTHON'] = sys.executable #Python worker 
 os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable #Python driver
 
-try: 
+try:
     # Initialize SparkSession
     spark = SparkSession.builder \
         .appName("ReadLogsToDataFrame") \
