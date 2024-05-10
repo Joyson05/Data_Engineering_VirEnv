@@ -1,0 +1,37 @@
+Step 1:
+#First download .deb jdbc connection from link (https://dev.mysql.com/downloads/connector/j/) for ubuntu linux 22.04
+
+Step2:
+#place the downloaded .deb file in home directory in ubuntu
+
+Step3:
+#Install the .deb Package using command:
+sudo dpkg -i /home/dev2/mysql-connector.deb(where the .deb file is placed)
+
+
+Step4:
+Extract the Contents
+dpkg-deb -x /home/dev2/mysql-connector.deb(where the .deb file is placed) /tmp/mysql-connector(path to place the extracted file)
+
+Step5:
+#Use the JDBC Driver JAR
+pyspark --driver-class-path /tmp/mysql-connector/usr/share/java/mysql-connector-java-8.4.0.jar
+
+
+Step6:
+Go to the path where mysql-connector file is extracted(/tmp/mysql-connector/usr/share/java/) & it will be extracted as .jar files like (mysql-connector-java-8.4.0.jar & one more)
+Copy the path of the file(mysql-connector-java-8.4.0.jar) and go to spark code and place it like shown below: 
+       
+spark = SparkSession.builder \
+            .appName("ReadLogsToDataFrame") \
+            .config("spark.jars", "/tmp/mysql-connector/usr/share/java/mysql-connector-java-8.4.0.jar") \
+            .getOrCreate()
+
+
+verify EC2_Pyspark_connect.py file to know how to give the details.
+
+
+
+
+
+
