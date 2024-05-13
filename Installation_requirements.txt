@@ -1,5 +1,0 @@
-#Windows installation requirements
-
-#-------airflow installation -- change give the python version used.-----
-pip install apache-airflow==2.9.1 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.1/constraints-3.10.txt"
-

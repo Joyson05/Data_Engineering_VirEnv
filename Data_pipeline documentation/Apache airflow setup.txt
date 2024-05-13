@@ -21,7 +21,7 @@ nano ~/.bashrc
 #Type the following
 AIRFLOW_HOME=/c/Users/vjadhav/airflow
 
-#Press Ctrl+S and Ctrl+X to exit the editor
+#Press Ctrl+S and Ctrl+X to save and exit the editor
 
 
 step 4:
@@ -48,7 +48,7 @@ airflow webserver --port 8080
 airflow scheduler
 
 
-#if the port number needs to be changed then redirect to airflow folder(can be found outside the folder where environment is created) and select airflow.cfg. inside cfg file change port number in -  base_url variable, endpoint_url variable and web_server_port variable. Then run airflow db init, airflow webserver -D, airflow webserver, airflow scheduler
+#if the port number needs to be changed then redirect to airflow folder(can be found outside the folder where environment is created) and select airflow.cfg. Inside cfg file change port number in following variable names-  base_url variable, endpoint_url variable and web_server_port variable. Then run command- airflow db init, airflow webserver -D, airflow webserver, airflow scheduler
 
 
 

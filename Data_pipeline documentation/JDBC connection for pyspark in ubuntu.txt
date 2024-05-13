@@ -10,16 +10,16 @@ sudo dpkg -i /home/dev2/mysql-connector.deb(where the .deb file is placed)
 
 
 Step4:
-Extract the Contents
+#Extract the Contents
 dpkg-deb -x /home/dev2/mysql-connector.deb(where the .deb file is placed) /tmp/mysql-connector(path to place the extracted file)
 
-Step5:
+Step5: (#optional -- just try this step if 6th step dosen't work)
 #Use the JDBC Driver JAR
 pyspark --driver-class-path /tmp/mysql-connector/usr/share/java/mysql-connector-java-8.4.0.jar
 
 
 Step6:
-Go to the path where mysql-connector file is extracted(/tmp/mysql-connector/usr/share/java/) & it will be extracted as .jar files like (mysql-connector-java-8.4.0.jar & one more)
+Go to the path where mysql-connector file is extracted(/tmp/mysql-connector/usr/share/java/) & it will be extracted as .jar files like (mysql-connector-java-8.4.0.jar & with one more file)
 Copy the path of the file(mysql-connector-java-8.4.0.jar) and go to spark code and place it like shown below: 
        
 spark = SparkSession.builder \
@@ -28,7 +28,7 @@ spark = SparkSession.builder \
             .getOrCreate()
 
 
-verify EC2_Pyspark_connect.py file to know how to give the details.
+verify EC2_Pyspark_connect.py file to know how to give the above details.
 
 
 

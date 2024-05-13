@@ -4,6 +4,6 @@ ec2 folder creation.
 sudo mkdir backup_files
 sudo mkdir main_files
 
-#Give permission 
+#Give permission to the folders created for read, write access
 sudo chmod 777 file_name ---- 777(read, write, execute), 077(no read, write, ececute)
 
