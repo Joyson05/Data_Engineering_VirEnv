@@ -1,0 +1,122 @@
+# Dependency............................. 
+Java JDK version 17
+pyspark (using pip)
+python version 3.10.anything (sudo apt update, sudo apt install python3)
+Apache airflow version 2.9.1 (install using pip)
+JDBC ubuntu linux .deb file
+
+
+
+#Airflow Installation....................
+#Apache airflow version 2.9.1
+Reference link: https://vivekjadhavr.medium.com/how-to-easily-install-apache-airflow-on-windows-6f041c9c80d2
+
+step 1 : 
+#Create virtual environment
+python3 -m venv airflow-env
+
+step 2: 
+#Activate the virtual environment
+source airflow-env/bin/activate
+
+step 3: 
+#To add envioronment variable
+nano ~/.bashrc
+
+#Type the following
+AIRFLOW_HOME=/c/Users/vjadhav/airflow
+#Press Ctrl+S and Ctrl+X to save and exit the editor
+
+step 4:
+# Install airflow
+pip install apache-airflow
+
+step 5:
+#Initialize the Database
+airflow db init
+
+step 6:
+Create an Admin User
+airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin email mymailid.com
+
+step7:
+#To give access for port number
+sudo ufw allow 8080(port number)
+
+step8:
+#Run the Web Server and Scheduler
+airflow webserver --port 8080
+airflow scheduler
+
+#if the port number needs to be changed then redirect to airflow folder(can be found outside the folder where environment is created) and select airflow.cfg. Inside cfg file change port number in following variable names-  base_url variable, endpoint_url variable and web_server_port variable. Then run command- airflow db init, airflow webserver -D, airflow webserver, airflow scheduler
+
+
+
+#Ec2 folder creation (in airflow folder)..................................
+#to create folder - give sudo always
+sudo mkdir backup_files 
+
+#Give permission to the folders created for read, write access
+sudo chmod 777 file_name ---- 777(read, write, execute), 077(no read, write, ececute)
+
+
+
+#JDBC Connection setup...............................................
+Step 1:
+#First download .deb jdbc connection from link (https://dev.mysql.com/downloads/connector/j/) for ubuntu linux 22.04
+
+Step2:
+#place the downloaded .deb file in home directory in ubuntu
+
+Step3:
+#Install the .deb Package using command:
+sudo dpkg -i /home/dev2/mysql-connector.deb(where the .deb file is placed)
+
+step4:
+create a directory called mysql-connector inside airflow directory
+& come out of that directory(cd ..)
+
+Step5:
+#Extract the Contents
+dpkg-deb -x /home/dev2/mysql-connector.deb(where the .deb file is placed) /mysql-connector(path to place the extracted file)
+
+Step6: (#optional -- just try this step if 6th step dosen't work)
+#Use the JDBC Driver JAR
+pyspark --driver-class-path /tmp/mysql-connector/usr/share/java/mysql-connector-java-8.4.0.jar
+
+
+Step7:
+Go to the path where mysql-connector file is extracted(/tmp/mysql-connector/usr/share/java/) & it will be extracted as .jar files like (mysql-connector-java-8.4.0.jar & with one more file)
+Copy the path of the file(mysql-connector-java-8.4.0.jar) and go to spark code and place it like shown below: 
+       
+spark = SparkSession.builder \
+            .appName("ReadLogsToDataFrame") \
+            .config("spark.jars", "/tmp/mysql-connector/usr/share/java/mysql-connector-java-8.4.0.jar") \
+            .getOrCreate()
+
+
+verify EC2_Pyspark_connect.py file to know how to give the above details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,10 +8,13 @@ Step3:
 #Install the .deb Package using command:
 sudo dpkg -i /home/dev2/mysql-connector.deb(where the .deb file is placed)
 
+step4:
+create a directory called mysql-connector inside airflow directory
+& come out of that directory(cd ..)
 
 Step4:
 #Extract the Contents
-dpkg-deb -x /home/dev2/mysql-connector.deb(where the .deb file is placed) /tmp/mysql-connector(path to place the extracted file)
+dpkg-deb -x /home/dev2/mysql-connector.deb(where the .deb file is placed) /mysql-connector(path to place the extracted file)
 
 Step5: (#optional -- just try this step if 6th step dosen't work)
 #Use the JDBC Driver JAR

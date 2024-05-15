@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about9\nUSE DATADB;\nCREATE TABLE pyspark_table (timestamp VARCHAR(255), version VARCHAR(255), level VARCHAR(255), level_value INT, logger_name VARCHAR(255), message VARCHAR(255), thread_name VARCHAR(255));\n",
+    "content": "\\about9\nUSE DATADB;\n#CREATE TABLE pyspark_table (timestamp VARCHAR(255), version VARCHAR(255), level VARCHAR(255), level_value INT, logger_name VARCHAR(255), message VARCHAR(255), thread_name VARCHAR(255));\nSELECT * FROM pyspark_table;",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,12 +15,12 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 2,
-                    "column": 12
+                    "lineNumber": 4,
+                    "column": 29
                 },
                 "position": {
-                    "lineNumber": 2,
-                    "column": 12
+                    "lineNumber": 4,
+                    "column": 29
                 }
             }
         ],
@@ -79,19 +79,16 @@
                         {
                             "type": 4,
                             "index": 0,
-                            "resultId": "b0a2666e-c946-4a4e-83de-c0fbd76ee786",
-                            "content": "OK, 0 records retrieved in 33.049ms"
+                            "resultId": "d7577098-6e74-41d7-fffe-f471b613098a",
+                            "content": "OK, 0 records retrieved in 28.726ms"
                         },
                         {
-                            "type": 0,
+                            "type": 4,
                             "index": 1,
-                            "content": "MySQL Error (1064): ClassicSession.run_sql: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@timestamp VARCHAR(255), @version VARCHAR(255), level VARCHAR(255), level_value ' at line 1",
-                            "language": "ansi"
+                            "resultId": "a449d7e0-dbcc-4d19-a881-8a76bf7f1c24",
+                            "content": "OK, 0 records retrieved in 27.379ms"
                         }
-                    ],
-                    "executionInfo": {
-                        "text": ""
-                    }
+                    ]
                 },
                 "currentHeight": 65,
                 "statements": [
@@ -108,10 +105,10 @@
                         "delimiter": ";",
                         "span": {
                             "start": 11,
-                            "length": 186
+                            "length": 187
                         },
-                        "contentStart": 12,
-                        "state": 0
+                        "contentStart": 11,
+                        "state": 1
                     }
                 ]
             },
@@ -128,7 +125,7 @@
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 0
+                            "length": 28
                         },
                         "contentStart": 0,
                         "state": 0
