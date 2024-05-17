@@ -4,6 +4,65 @@ pyspark (using pip)
 python version 3.10.anything (sudo apt update, sudo apt install python3)
 Apache airflow version 2.9.1 (install using pip)
 JDBC ubuntu linux .deb file
+Mysql in Ec2 instance(version 8.0.36 )
+
+
+
+#Create EC2 instance......................
+https://www.geeksforgeeks.org/amazon-ec2-creating-an-elastic-cloud-compute-instance/
+
+
+
+#Creating mysql in ubuntu AWS Ec2 instance------------
+
+# sudo apt update
+ 
+# sudo apt install mysql-server
+ 
+# sudo systemctl start mysql.service
+ 
+# sudo systemctl status mysql.service
+ 
+# sudo mysql
+ 
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin@123';  (here admin@123 is the root password)
+ 
+# exit
+--------------------------------------------
+ 
+# mysql -u root -p 
+ 
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+ 
+# exit;
+ 
+# sudo mysql
+ 
+# CREATE USER 'dataanalyse'@'%' IDENTIFIED BY 'data@555';    (here dataanalyse is db user name &  data@555 is db password)
+ 
+# SELECT user, host FROM mysql.user;
+ 
+# GRANT ALL PRIVILEGES ON * . * TO 'dataanalyse'@'localhost';
+ 
+# EXIT
+
+
+
+#To connect db to vs code-------------------
+
+#Install a extention called "MYSQL SHELL FOR VS CODE" in vs code
+
+#Give credentials like
+
+    username: dataanalyse
+    password: data@555
+    ip address: (ex: 35:777:333:99) port 3306 default
+
+
+# making ip address static-----------------------
+1, Go to "Elastic ip address" service and click allocate ip address and click allocate
+2, then click the created ip and go inside, then click "assosiate elastic ip address", then give the instance name created before.
+    
 
 
 
@@ -48,17 +107,23 @@ step8:
 airflow webserver --port 8080
 airflow scheduler
 
+step9:
+create a folder called dag in airflow folder
+open airflow.cfg file and change the dag directory path by adding dag folder at end.
+
+step10:
+create a .py file in dag folder and write code in it and save the file to reflect in airflow UI.
+
 #if the port number needs to be changed then redirect to airflow folder(can be found outside the folder where environment is created) and select airflow.cfg. Inside cfg file change port number in following variable names-  base_url variable, endpoint_url variable and web_server_port variable. Then run command- airflow db init, airflow webserver -D, airflow webserver, airflow scheduler
 
 
 
 #Ec2 folder creation (in airflow folder)..................................
-#to create folder - give sudo always
+#to create folder
 sudo mkdir backup_files 
 
 #Give permission to the folders created for read, write access
 sudo chmod 777 file_name ---- 777(read, write, execute), 077(no read, write, ececute)
-
 
 
 #JDBC Connection setup...............................................
@@ -96,6 +161,8 @@ spark = SparkSession.builder \
 
 
 verify EC2_Pyspark_connect.py file to know how to give the above details.
+
+
 
 
 

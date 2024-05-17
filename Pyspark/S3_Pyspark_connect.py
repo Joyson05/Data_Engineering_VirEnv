@@ -37,9 +37,9 @@ try:
     for obj in response.get('Contents', []):
         key = obj['Key']
         #print("key",key)
-        if key.endswith('.log'):
+        if key.endswith('.json'):
             json_files.append(key)
-    #print(json_files)
+    print(json_files)
 
 
     for file_key in json_files:
