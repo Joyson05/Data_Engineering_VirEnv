@@ -1,3 +1,9 @@
+workflow 1:
+
+		Apache Airflow(Data source(Ec2 folder) -> Pyspark -> Mysql in Ec2 instance)  -> Powerbi
+  #Below mentioned documentaion is for the flow mentioned above.
+
+
 # Dependency............................. 
 Java JDK version 17
 pyspark (using pip)
@@ -28,7 +34,7 @@ https://www.geeksforgeeks.org/amazon-ec2-creating-an-elastic-cloud-compute-insta
 # ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin@123';  (here admin@123 is the root password)
  
 # exit
---------------------------------------------
+
  
 # mysql -u root -p 
  
