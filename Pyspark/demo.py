@@ -1,9 +1,6 @@
 from pyspark.sql import SparkSession
 import json
-import os
-import sys
-os.environ['PYSPARK_PYTHON'] = sys.executable #Python worker 
-os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable #Python driver
+from flatten_json import flatten
 
 # Initialize SparkSession
 spark = SparkSession.builder \
