@@ -49,20 +49,20 @@ for record in flattened_data:
     # print("flattened_data",record)
     if record.get("request_page")[1:] == "vechile-summary":
         # Ensure the record matches the schema
-        base_record_vechicle_summary = {k: record.get(k) for k in schema.base_schema_vechicle_summary.fieldNames()}
-        df = spark.createDataFrame([base_record_vechicle_summary], schema=schema.base_schema_vechicle_summary)
+        base_record_vechicle_summary = {k: record.get(k) for k in schema.vechicle_summary_base_schema.fieldNames()}
+        df = spark.createDataFrame([base_record_vechicle_summary], schema=schema.vechicle_summary_base_schema)
         df = df.withColumn("request_page", regexp_replace(regexp_replace(col("request_page"), "^/", ""), "-", " "))
         df.write.jdbc(url=jdbc_url, table="dtdlogs", mode="append", properties=connection_properties)
         
         if record.get("request_dllCallMethod")== "ECU coordinates":
-            response_record_coordinates_vechicle_summary = {k: record.get(k) for k in schema.response_coordinates_vechicle_summary.fieldNames()}
-            df = spark.createDataFrame([response_record_coordinates_vechicle_summary], schema=schema.response_coordinates_vechicle_summary)
+            response_record_coordinates_vechicle_summary = {k: record.get(k) for k in schema.vechicle_summary_response_coordinates.fieldNames()}
+            df = spark.createDataFrame([response_record_coordinates_vechicle_summary], schema=schema.vechicle_summary_response_coordinates)
             df.write.jdbc(url=jdbc_url, table="response_coordinates_vechicle_summary", mode="append", properties=connection_properties)
             
         if record.get("request_dllCallMethod")== "DTC list":
             for i in data:
-                response_record_dtclist_vechicle_summary = {k: i.get(k) for k in schema.response_dtclist_vechicle_summary.fieldNames()}
-                df = spark.createDataFrame([response_record_dtclist_vechicle_summary], schema=schema.response_dtclist_vechicle_summary)
+                response_record_dtclist_vechicle_summary = {k: i.get(k) for k in schema.vechicle_summary_response_dtclist.fieldNames()}
+                df = spark.createDataFrame([response_record_dtclist_vechicle_summary], schema=schema.vechicle_summary_response_dtclist)
                 df.write.jdbc(url=jdbc_url, table="response_dtclist_vechicle_summary", mode="append", properties=connection_properties)
         
 
