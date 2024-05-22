@@ -1,0 +1,1185 @@
+[
+  {
+    "createAt": "1/31/2024, 1:06:52 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/login",
+      "page": "/login",
+      "action": "login with microsoft"
+    },
+    "response": {
+      "data": {
+        "user": "Tauqueer",
+        "loginAt": "1/31/2024, 1:06:52 PM",
+        "isLogin": true,
+        "logoutAt": null,
+        "isLogout": false
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:10 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "ECU coordinates",
+      "ecuName": "ENGINE"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": {
+          "id": 1,
+          "ecuName": "ENGINE",
+          "ecuStatus": "Active",
+          "directionX": 10,
+          "directionY": 64,
+          "dtdDirectionX2D": 64,
+          "dtdDirectionY2D": 11,
+          "directionX3d": 50,
+          "directionY3d": 63
+        },
+        "message": "ECU coordinates data retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:10 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "DTC list",
+      "ecuName": "ENGINE"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ENGINE",
+            "diagnosticTroubleCode": null,
+            "description": null,
+            "dtcState": "No DTC found"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:11 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "ECU coordinates",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": {
+          "id": 4,
+          "ecuName": "BCM",
+          "ecuStatus": "Fault",
+          "directionX": 21,
+          "directionY": 59,
+          "dtdDirectionX2D": 68,
+          "dtdDirectionY2D": 37,
+          "directionX3d": 55,
+          "directionY3d": 50
+        },
+        "message": "ECU coordinates data retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:11 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "DTC list",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B219F-12",
+            "description": "CL30s output short to battery",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21A0-16",
+            "description": "Battery voltage abnormal low",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AB-15",
+            "description": "Horn control relay output circuit open load or short to battery",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AC-12",
+            "description": "Front washer control relay output circuit short to battery",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AE-11",
+            "description": "Hazard LED circuit short to battery",
+            "dtcState": "Pending fault"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:12 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "ECU coordinates",
+      "ecuName": "CLUSTER"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": {
+          "id": 3,
+          "ecuName": "CLUSTER",
+          "ecuStatus": "Fault",
+          "directionX": 32,
+          "directionY": 28,
+          "dtdDirectionX2D": 31,
+          "dtdDirectionY2D": 32,
+          "directionX3d": 32,
+          "directionY3d": 42
+        },
+        "message": "ECU coordinates data retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:12 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "DTC list",
+      "ecuName": "CLUSTER"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "U1A3E-87",
+            "description": "ICC lost with BCM",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "U1A3F-87",
+            "description": "ICC lost with BMS",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "P19F2-96",
+            "description": "ICC WIFI module error",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "P19F3-96",
+            "description": "ICC BT module error",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "P19F1-07",
+            "description": "ICC DAB module error",
+            "dtcState": "Active fault"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:13 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "ECU coordinates",
+      "ecuName": "ACU"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": {
+          "id": 5,
+          "ecuName": "ACU",
+          "ecuStatus": "Active",
+          "directionX": 44,
+          "directionY": 47,
+          "dtdDirectionX2D": 44,
+          "dtdDirectionY2D": 47,
+          "directionX3d": 55,
+          "directionY3d": 30
+        },
+        "message": "ECU coordinates data retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:14 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "DTC list",
+      "ecuName": "ACU"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ACU",
+            "diagnosticTroubleCode": null,
+            "description": null,
+            "dtcState": "No DTC found"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:15 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "ECU coordinates",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": {
+          "id": 2,
+          "ecuName": "ABS",
+          "ecuStatus": "Fault",
+          "directionX": 35,
+          "directionY": 67,
+          "dtdDirectionX2D": 57,
+          "dtdDirectionY2D": 20,
+          "directionX3d": 42,
+          "directionY3d": 55
+        },
+        "message": "ECU coordinates data retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:15 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/vechile-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "DTC list",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/get-ecu-coordinates",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C1100-11",
+            "description": "Wheel speed sensor FL short circuit to ground",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3202-11",
+            "description": "Wheel speed sensor RL short circuit to ground",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3202-13",
+            "description": "Wheel speed sensor RL open circuit",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3567-29",
+            "description": "Brake pad temperature too high",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C0238-97",
+            "description": "Wheel speed mismatch",
+            "dtcState": "Active fault"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:28 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "page": "/fault-management",
+      "action": "clear DTC",
+      "dllCallMethod": "clear DTC list",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ENGINE",
+            "diagnosticTroubleCode": null,
+            "description": null,
+            "dtcState": "No DTC found"
+          }
+        ],
+        "message": "Memorised DTCs has been cleared and retrieved active and pending DTCs Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:28 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "page": "/fault-management",
+      "action": "clear DTC",
+      "dllCallMethod": "clear DTC list",
+      "ecuName": "CLUSTER"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B219F-12",
+            "description": "CL30s output short to battery",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21A0-16",
+            "description": "Battery voltage abnormal low",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AC-12",
+            "description": "Front washer control relay output circuit short to battery",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AE-11",
+            "description": "Hazard LED circuit short to battery",
+            "dtcState": "Pending fault"
+          }
+        ],
+        "message": "Memorised DTCs has been cleared and retrieved active and pending DTCs Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:29 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "page": "/fault-management",
+      "action": "clear DTC",
+      "dllCallMethod": "clear DTC list",
+      "ecuName": "ACU"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "U1A3E-87",
+            "description": "ICC lost with BCM",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "U1A3F-87",
+            "description": "ICC lost with BMS",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "P19F1-07",
+            "description": "ICC DAB module error",
+            "dtcState": "Active fault"
+          }
+        ],
+        "message": "Memorised DTCs has been cleared and retrieved active and pending DTCs Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:29 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "page": "/fault-management",
+      "action": "clear DTC",
+      "dllCallMethod": "clear DTC list",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ACU",
+            "diagnosticTroubleCode": null,
+            "description": null,
+            "dtcState": "No DTC found"
+          }
+        ],
+        "message": "Memorised DTCs has been cleared and retrieved active and pending DTCs Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:29 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "page": "/fault-management",
+      "action": "clear DTC",
+      "dllCallMethod": "clear DTC list",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C1100-11",
+            "description": "Wheel speed sensor FL short circuit to ground",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3202-13",
+            "description": "Wheel speed sensor RL open circuit",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3567-29",
+            "description": "Brake pad temperature too high",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C0238-97",
+            "description": "Wheel speed mismatch",
+            "dtcState": "Active fault"
+          }
+        ],
+        "message": "Memorised DTCs has been cleared and retrieved active and pending DTCs Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:38 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/fault-management",
+      "action": "scan ECU",
+      "dllCallMethod": "DTC list",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ENGINE",
+            "diagnosticTroubleCode": null,
+            "description": null,
+            "dtcState": "No DTC found"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:38 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/fault-management",
+      "action": "scan ECU",
+      "dllCallMethod": "DTC list",
+      "ecuName": "CLUSTER"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B219F-12",
+            "description": "CL30s output short to battery",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21A0-16",
+            "description": "Battery voltage abnormal low",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AB-15",
+            "description": "Horn control relay output circuit open load or short to battery",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AC-12",
+            "description": "Front washer control relay output circuit short to battery",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "BCM",
+            "diagnosticTroubleCode": "B21AE-11",
+            "description": "Hazard LED circuit short to battery",
+            "dtcState": "Pending fault"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:39 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/fault-management",
+      "action": "scan ECU",
+      "dllCallMethod": "DTC list",
+      "ecuName": "ACU"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "U1A3E-87",
+            "description": "ICC lost with BCM",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "U1A3F-87",
+            "description": "ICC lost with BMS",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "P19F2-96",
+            "description": "ICC WIFI module error",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "P19F3-96",
+            "description": "ICC BT module error",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "CLUSTER",
+            "diagnosticTroubleCode": "P19F1-07",
+            "description": "ICC DAB module error",
+            "dtcState": "Active fault"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:39 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/fault-management",
+      "action": "scan ECU",
+      "dllCallMethod": "DTC list",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ACU",
+            "diagnosticTroubleCode": null,
+            "description": null,
+            "dtcState": "No DTC found"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:39 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/fault-management",
+      "action": "scan ECU",
+      "dllCallMethod": "DTC list",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C1100-11",
+            "description": "Wheel speed sensor FL short circuit to ground",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3202-11",
+            "description": "Wheel speed sensor RL short circuit to ground",
+            "dtcState": "Memorised fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3202-13",
+            "description": "Wheel speed sensor RL open circuit",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3567-29",
+            "description": "Brake pad temperature too high",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C0238-97",
+            "description": "Wheel speed mismatch",
+            "dtcState": "Active fault"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:53 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/measurement/ecu-parameter-values",
+      "page": "/read-write",
+      "action": "view/monitor",
+      "dllCallMethod": "read/write parameters",
+      "parameters": [
+        "ENGINE",
+        [
+          "Vin Number",
+          "Throttle Position Sensor"
+        ]
+      ]
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/measurement/ecu-parameter-values",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ENGINE",
+            "ecuParameter": "Vin Number",
+            "ecuParameterValue": "VCF1ZBU2XPG001062",
+            "ecuParameterUnit": null,
+            "ecuParameterMinValue": null,
+            "getEcuParameterMaxValue": null
+          },
+          {
+            "ecuName": "ENGINE",
+            "ecuParameter": "Throttle Position Sensor",
+            "ecuParameterValue": "120.0",
+            "ecuParameterUnit": "ohms",
+            "ecuParameterMinValue": 25,
+            "getEcuParameterMaxValue": 175
+          }
+        ],
+        "message": "ECU Parameter Values Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:04 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/measurement/ecu-status-values",
+      "page": "/read-write",
+      "action": "check status",
+      "dllCallMethod": "read/write status",
+      "parameters": [
+        "ENGINE",
+        [
+          "Clutch Pedal Position",
+          "Turbocharger Solenoid Valve"
+        ]
+      ]
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/measurement/ecu-status-values",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ENGINE",
+            "ecuStatusParam": "Clutch Pedal Position",
+            "ecuParamState": "Pressed"
+          },
+          {
+            "ecuName": "ENGINE",
+            "ecuStatusParam": "Turbocharger Solenoid Valve",
+            "ecuParamState": "Activated"
+          }
+        ],
+        "message": "ECU Status Values Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:09 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/measurement/ecu-parameter-values",
+      "page": "/actuator-io",
+      "action": "drop down",
+      "dllCallMethod": "ecu-parameter-values",
+      "ecuName": "ENGINE",
+      "parameters": "Turbocharger Solenoid Valve"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/measurement/ecu-parameter-values",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ENGINE",
+            "actuatorTestParam": "Turbocharger Solenoid Valve",
+            "action": [
+              "Deactivate",
+              "Activate"
+            ],
+            "condition": [
+              "Ignition on",
+              "Engine off",
+              "Parking brake engaged"
+            ],
+            "actuatorTestDescription": [
+              "The turbocharger's solenoid valve will be activated and then deactivated.",
+              "This test can be used to check if the solenoid is working correctly or not."
+            ],
+            "actuatorActivationMethod": [
+              "Activate and deactivate buttons to be displayed.",
+              "Clicking on activate button will start the routine. The button will be disabled till routine is completed.",
+              "Clicking on deactivate button will stop the routine.",
+              "Deactivate button will stay disabled until activate button is disabled. It will be enabled only after the activate button is disabled."
+            ],
+            "actuatorTestTimeDuration": "5 minutes for whole test"
+          }
+        ],
+        "message": "ECU Actuator Test Data Retrieved Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:17 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/vehicle/get-routine-tyre",
+      "page": "/routines",
+      "action": "drop down",
+      "ecuName": "ENGINE",
+      "parameter": "Injector Code Learning"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/vehicle/get-routine-tyre",
+      "data": {
+        "status": 200,
+        "data": {
+          "routineDataList": {
+            "Injector_1": "12341",
+            "Injector_2": "111400",
+            "Injector_3": "22S67H",
+            "Injector_4": "qsqsqsxd"
+          }
+        },
+        "message": "Routine injector data has been fetched successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:22 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/vehicle/routine",
+      "page": "/routines",
+      "action": "Register Code",
+      "ecuName": "ENGINE",
+      "parameter": "Injector Code Learning",
+      "Injector_1": {
+        "beforeUpdate": "12341",
+        "afterUpdate": "123490"
+      }
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/vehicle/routine",
+      "data": {
+        "status": 200,
+        "message": "Routine injector data has been saved successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:25 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/vehicle/get-vehicle-software",
+      "page": "/reprogramming-flashing",
+      "action": "initial call",
+      "dllCallMethod": "reprogramming-flashing",
+      "ecuName": "",
+      "parameters": "VCF1ZBU2XPG001062"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/measurement/ecu-parameter-values",
+      "data": {
+        "status": 200,
+        "data": {
+          "vehicleSoftwareList": [
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "ABS",
+              "Hardware_Part_Number": "FM298033H004C",
+              "Cloud_Software_Part_Number": "23840211IR",
+              "Cloud_Software_Version_Number": "1.1.4",
+              "Stack_Software_Part_Number": "FM298033S004G",
+              "Stack_Software_Version_Number": "1.1.4"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "BCM",
+              "Hardware_Part_Number": "FM298033H003C",
+              "Cloud_Software_Part_Number": "12398774IU",
+              "Cloud_Software_Version_Number": "1.4.5",
+              "Stack_Software_Part_Number": "FM298033S003G",
+              "Stack_Software_Version_Number": "1.4.5"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "CLUSTER",
+              "Hardware_Part_Number": "FM298033H002C",
+              "Cloud_Software_Part_Number": "79875630RT",
+              "Cloud_Software_Version_Number": "3.0.1",
+              "Stack_Software_Part_Number": "FM298033S002G",
+              "Stack_Software_Version_Number": "3.0.1"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "ENGINE",
+              "Hardware_Part_Number": "FM298033H005C",
+              "Cloud_Software_Part_Number": "20985763TT",
+              "Cloud_Software_Version_Number": "1.0.2",
+              "Stack_Software_Part_Number": "FM298033S005G",
+              "Stack_Software_Version_Number": "1.0.2"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "ACU",
+              "Hardware_Part_Number": "FM298033H001C",
+              "Cloud_Software_Part_Number": "223ULM20AL",
+              "Cloud_Software_Version_Number": "2.0.1",
+              "Stack_Software_Part_Number": "FM298033S001G",
+              "Stack_Software_Version_Number": "2.0.1"
+            }
+          ]
+        },
+        "message": "Stack vehicle software data has been retrieved successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:31 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/vehicle/save-vehicle-software",
+      "page": "/reprogramming-flashing",
+      "action": "Flash Now",
+      "dllCallMethod": "flashing_sequence",
+      "vechileDetails": {
+        "ecuName": "ABS",
+        "hardwarePartNo": "FM298033H004C",
+        "softwarePartNo": "FM298033S004G",
+        "stackSofrwareVersion": "1.1.4"
+      }
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/vehicle/save-vehicle-software",
+      "data": {
+        "status": 200,
+        "data": {
+          "VIN_Number": "VCF1ZBU2XPG001062",
+          "ECU_Name": "ABS",
+          "Hardware_Part_Number": "FM298033H004C",
+          "Stack_Software_Part_Number": "FM298033S004G",
+          "Stack_Software_Version_Number": "1.1.4"
+        },
+        "message": "Stack vehicle software data has been saved successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:33 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-demo/get-vehicle-features",
+      "page": "/feature-enablement",
+      "action": "initial call",
+      "dllCallMethod": "get-vehicle-features",
+      "parameters": {
+        "VIN": "VIN-0012"
+      }
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-demo/get-vehicle-features",
+      "data": {
+        "SmartValet": null,
+        "SmartLaneGuidance": null,
+        "SmartParking": {
+          "validTill": null,
+          "subscribed": "false",
+          "name": "Smart Parking",
+          "inSyncWithCar": "true",
+          "function_name": "Smart Parking",
+          "carImage": "Smart Parking"
+        },
+        "SmartStreering": null,
+        "ActiveSafetyAssistance": null,
+        "IntelligentInteriorLighting": null,
+        "DriverMonitoringSystem": null,
+        "GestureControlSystem": null
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:08:41 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": "1/31/2024, 1:08:41 PM",
+    "request": {
+      "event": "https://apiservicediagnostics.bluebinaries.com/dtd-auth/logout",
+      "page": "header user",
+      "action": "logout"
+    },
+    "response": {
+      "data": {
+        "user": "Tauqueer",
+        "logoutAt": "1/31/2024, 1:08:41 PM",
+        "isLogout": true
+      }
+    }
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "createAt": "1/24/2024, 6:50:52 PM",
+    "user": "Admin",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readAvailableVciList",
+      "page": "/hardware-interface",
+      "action": "initial call",
+      "dllCallMethod": "GetDevicelist"
+    },
+    "response": {
+      "event": "replyAvailableVciList",
+      "data": {
+        "user": "Admin",
+        "loginAt": "1/24/2024, 6:50:52 PM",
+        "isLogin": true,
+        "logoutAt": null,
+        "isLogout": false
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:50:59 PM",
+    "user": "Admin",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readAvailableVciList",
+      "page": "/hardware-interface",
+      "action": "initial call",
+      "dllCallMethod": "GetDevicelist"
+    },
+    "response": {
+      "event": "replyAvailableVciList",
+      "data": {
+        "status": 200,
+        "message": "List of available VCIs are fetched successfully",
+        "error": false,
+        "data": {
+          "dllCallMethod": "GetDevicelist",
+          "vciList": "J2534 for Kvaser Hardware"
+        }
+      }
+    }
+  }
+]

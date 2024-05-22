@@ -6,7 +6,6 @@ Github process
 	4.	Copy and paste the files from working folder to the created folder.
 	5.	﻿﻿﻿Open cmd from cloned folded in local and type ( code.)
 	6.	﻿﻿﻿Vs code will be open. In cmd type git add and git commit -m "message”
-   7.  git push → to push to git main
-        repo.
+    7.  git push → to push to git main repo.
 	8.	Live sync will be done now automatically .
 	9.	To create branch in local - (git checkout - b new branch name). Files in main repo will be cloned in the branch created automatically 

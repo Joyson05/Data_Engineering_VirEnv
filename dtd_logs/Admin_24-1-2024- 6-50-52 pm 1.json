@@ -1,0 +1,1150 @@
+[
+  {
+    "createAt": "1/24/2024, 6:50:52 PM",
+    "user": "Admin",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readAvailableVciList",
+      "page": "/hardware-interface",
+      "action": "initial call",
+      "dllCallMethod": "GetDevicelist"
+    },
+    "response": {
+      "event": "replyAvailableVciList",
+      "data": {
+        "user": "Admin",
+        "loginAt": "1/24/2024, 6:50:52 PM",
+        "isLogin": true,
+        "logoutAt": null,
+        "isLogout": false
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:50:59 PM",
+    "user": "Admin",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readAvailableVciList",
+      "page": "/hardware-interface",
+      "action": "initial call",
+      "dllCallMethod": "GetDevicelist"
+    },
+    "response": {
+      "event": "replyAvailableVciList",
+      "data": {
+        "status": 200,
+        "message": "List of available VCIs are fetched successfully",
+        "error": false,
+        "data": {
+          "dllCallMethod": "GetDevicelist",
+          "vciList": [
+            "J2534 for Kvaser Hardware",
+            "PCANPT32"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:51:52 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "checkEcuConnectivityStatus",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "TesterPresent",
+      "ecuName": "ENGINE"
+    },
+    "response": {
+      "event": "replyEcuConnectivityStatus",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU status successfully.",
+        "error": false,
+        "data": {
+          "ecuPositionData": {
+            "id": 1,
+            "ecuName": "ENGINE",
+            "ecuStatus": "Positive",
+            "directionX": 10,
+            "directionY": 64,
+            "dtdDirectionX2D": 64,
+            "dtdDirectionY2D": 11,
+            "directionX3d": 50,
+            "directionY3d": 63
+          },
+          "dllCallMethod": "TesterPresent",
+          "ecuName": "ENGINE"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:51:53 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuDtcList",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "READDTC",
+      "ecuName": "ENGINE"
+    },
+    "response": {
+      "event": "replyEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "No DTC found",
+              "readDtc": {}
+            }
+          ],
+          "dllCallMethod": "READDTC",
+          "ecuName": "ENGINE"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:51:59 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "checkEcuConnectivityStatus",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "TesterPresent",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "event": "replyEcuConnectivityStatus",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU status successfully.",
+        "error": false,
+        "data": {
+          "ecuPositionData": {
+            "id": 2,
+            "ecuName": "ABS",
+            "ecuStatus": "Positive",
+            "directionX": 35,
+            "directionY": 67,
+            "dtdDirectionX2D": 57,
+            "dtdDirectionY2D": 20,
+            "directionX3d": 42,
+            "directionY3d": 55
+          },
+          "dllCallMethod": "TesterPresent",
+          "ecuName": "ABS"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:52:00 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuDtcList",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "READDTC",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "event": "replyEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C110011",
+                "description": "Wheel speed sensor FL short circuit to ground",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C320211",
+                "description": "Wheel speed sensor RL short circuit to ground",
+                "dtcState": "Memorised"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C320213",
+                "description": "Wheel speed sensor RL open circuit",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C356729",
+                "description": "Brake pad temperature too high",
+                "dtcState": "Pending"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C023897",
+                "description": "Wheel speed mismatch",
+                "dtcState": "Active"
+              }
+            }
+          ],
+          "dllCallMethod": "READDTC",
+          "ecuName": "ABS"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:52:07 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "checkEcuConnectivityStatus",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "TesterPresent",
+      "ecuName": "CLUSTER"
+    },
+    "response": {
+      "event": "replyEcuConnectivityStatus",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU status successfully.",
+        "error": false,
+        "data": {
+          "ecuPositionData": {
+            "id": 3,
+            "ecuName": "CLUSTER",
+            "ecuStatus": "Positive",
+            "directionX": 32,
+            "directionY": 28,
+            "dtdDirectionX2D": 31,
+            "dtdDirectionY2D": 32,
+            "directionX3d": 32,
+            "directionY3d": 42
+          },
+          "dllCallMethod": "TesterPresent",
+          "ecuName": "CLUSTER"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:52:09 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuDtcList",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "READDTC",
+      "ecuName": "CLUSTER"
+    },
+    "response": {
+      "event": "replyEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "U1A3E87",
+                "description": "ICC lost with BCM",
+                "dtcState": "Pending"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "U1A3F87",
+                "description": "ICC lost with BMS",
+                "dtcState": "Pending"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "P19F296",
+                "description": "ICC WIFI module error",
+                "dtcState": "Memorised"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "P19F396",
+                "description": "ICC BT module error",
+                "dtcState": "Memorised"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "P19F107",
+                "description": "ICC DAB module error",
+                "dtcState": "Active"
+              }
+            }
+          ],
+          "dllCallMethod": "READDTC",
+          "ecuName": "CLUSTER"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:52:15 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "checkEcuConnectivityStatus",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "TesterPresent",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "event": "replyEcuConnectivityStatus",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU status successfully.",
+        "error": false,
+        "data": {
+          "ecuPositionData": {
+            "id": 4,
+            "ecuName": "BCM",
+            "ecuStatus": "Positive",
+            "directionX": 21,
+            "directionY": 59,
+            "dtdDirectionX2D": 68,
+            "dtdDirectionY2D": 37,
+            "directionX3d": 55,
+            "directionY3d": 50
+          },
+          "dllCallMethod": "TesterPresent",
+          "ecuName": "BCM"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:52:17 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuDtcList",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "READDTC",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "event": "replyEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B219F12",
+                "description": "CL30s output short to battery",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B21A016",
+                "description": "Battery voltage abnormal low",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B21AB15",
+                "description": "Horn control relay output circuit open load or short to battery",
+                "dtcState": "Memorised"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B21AC12",
+                "description": "Front washer control relay output circuit short to battery",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B21AE11",
+                "description": "Hazard LED circuit short to ground",
+                "dtcState": "Pending"
+              }
+            }
+          ],
+          "dllCallMethod": "READDTC",
+          "ecuName": "BCM"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:52:23 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "checkEcuConnectivityStatus",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "TesterPresent",
+      "ecuName": "ACU"
+    },
+    "response": {
+      "event": "replyEcuConnectivityStatus",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU status successfully.",
+        "error": false,
+        "data": {
+          "ecuPositionData": {
+            "id": 5,
+            "ecuName": "ACU",
+            "ecuStatus": "Positive",
+            "directionX": 44,
+            "directionY": 47,
+            "dtdDirectionX2D": 44,
+            "dtdDirectionY2D": 47,
+            "directionX3d": 55,
+            "directionY3d": 30
+          },
+          "dllCallMethod": "TesterPresent",
+          "ecuName": "ACU"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:52:24 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuDtcList",
+      "page": "/vehicle-summary",
+      "action": "vehicle scan",
+      "dllCallMethod": "READDTC",
+      "ecuName": "ACU"
+    },
+    "response": {
+      "event": "replyEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "No DTC found",
+              "readDtc": {}
+            }
+          ],
+          "dllCallMethod": "READDTC",
+          "ecuName": "ACU"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:53:33 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "clearEcuDtcList",
+      "page": "/fault-management",
+      "action": "Clear DTC",
+      "dllCallMethod": "ClearDTC",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "event": "replyClearEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list after DTC clear successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B219F12",
+                "description": "CL30s output short to battery",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B21A016",
+                "description": "Battery voltage abnormal low",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B21AC12",
+                "description": "Front washer control relay output circuit short to battery",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "BCM",
+                "diagnosticTroubleCode": "B21AE11",
+                "description": "Hazard LED circuit short to ground",
+                "dtcState": "Pending"
+              }
+            }
+          ],
+          "dllCallMethod": "ClearDTC",
+          "ecuName": "BCM"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:53:35 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "clearEcuDtcList",
+      "page": "/fault-management",
+      "action": "Clear DTC",
+      "dllCallMethod": "ClearDTC",
+      "ecuName": "CLUSTER"
+    },
+    "response": {
+      "event": "replyClearEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list after DTC clear successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "U1A3E87",
+                "description": "ICC lost with BCM",
+                "dtcState": "Pending"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "U1A3F87",
+                "description": "ICC lost with BMS",
+                "dtcState": "Pending"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "CLUSTER",
+                "diagnosticTroubleCode": "P19F107",
+                "description": "ICC DAB module error",
+                "dtcState": "Active"
+              }
+            }
+          ],
+          "dllCallMethod": "ClearDTC",
+          "ecuName": "CLUSTER"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:53:37 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "clearEcuDtcList",
+      "page": "/fault-management",
+      "action": "Clear DTC",
+      "dllCallMethod": "ClearDTC",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "event": "replyClearEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list after DTC clear successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C110011",
+                "description": "Wheel speed sensor FL short circuit to ground",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C320213",
+                "description": "Wheel speed sensor RL open circuit",
+                "dtcState": "Active"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C356729",
+                "description": "Brake pad temperature too high",
+                "dtcState": "Pending"
+              }
+            },
+            {
+              "isDtcFound": "found",
+              "readDtc": {
+                "ecuName": "ABS",
+                "diagnosticTroubleCode": "C023897",
+                "description": "Wheel speed mismatch",
+                "dtcState": "Active"
+              }
+            }
+          ],
+          "dllCallMethod": "ClearDTC",
+          "ecuName": "ABS"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:53:38 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "clearEcuDtcList",
+      "page": "/fault-management",
+      "action": "Clear DTC",
+      "dllCallMethod": "ClearDTC",
+      "ecuName": "ENGINE"
+    },
+    "response": {
+      "event": "replyClearEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list after DTC clear successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "No DTC found",
+              "readDtc": {}
+            }
+          ],
+          "dllCallMethod": "ClearDTC",
+          "ecuName": "ENGINE"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:53:39 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "clearEcuDtcList",
+      "page": "/fault-management",
+      "action": "Clear DTC",
+      "dllCallMethod": "ClearDTC",
+      "ecuName": "ACU"
+    },
+    "response": {
+      "event": "replyClearEcuDtcList",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU DTC list after DTC clear successfully.",
+        "error": false,
+        "data": {
+          "ecuDtcMapList": [
+            {
+              "isDtcFound": "No DTC found",
+              "readDtc": {}
+            }
+          ],
+          "dllCallMethod": "ClearDTC",
+          "ecuName": "ACU"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:54:14 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuParameterValue",
+      "page": "/read-write",
+      "action": "view/monitor",
+      "ecuName": "BCM",
+      "parameter": [
+        "BCM:VIN Number",
+        "BCM:Battery Voltage"
+      ]
+    },
+    "response": {
+      "event": "replyEcuParameterValue",
+      "data": [
+        {
+          "ecuName": "BCM",
+          "ecuParameter": "Battery Voltage",
+          "ecuParameterValue": "12.1",
+          "ecuParameterUnit": "volts",
+          "ecuParameterMinValue": 11,
+          "getEcuParameterMaxValue": 14.5
+        },
+        {
+          "ecuName": "BCM",
+          "ecuParameter": "VIN Number",
+          "ecuParameterValue": "VCF1ZBU2XPG001062"
+        }
+      ]
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:54:40 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuStatusParamValue",
+      "page": "/read-write",
+      "action": "Check Status",
+      "dllCallMethod": "ReadDatabyidentifier",
+      "ecuStatusParam": {
+        "ecuName": "BCM",
+        "ecuStatusParam": [
+          "BCM:Central Door Lock Switch",
+          "BCM:Door Switch Rear Left Door"
+        ]
+      }
+    },
+    "response": {
+      "event": "replyEcuStatusParamValue",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU status parameter value successfully.",
+        "error": false,
+        "data": {
+          "ecuStatusParamValue": {
+            "ecuName": "BCM",
+            "ecuStatusParam": "Central Door Lock Switch",
+            "ecuParamState": "Unlocked "
+          },
+          "dllCallMethod": "ReadDatabyidentifier"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:54:42 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "readEcuStatusParamValue",
+      "page": "/read-write",
+      "action": "Check Status",
+      "dllCallMethod": "ReadDatabyidentifier",
+      "ecuStatusParam": {
+        "ecuName": "BCM",
+        "ecuStatusParam": [
+          "BCM:Central Door Lock Switch",
+          "BCM:Door Switch Rear Left Door"
+        ]
+      }
+    },
+    "response": {
+      "event": "replyEcuStatusParamValue",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU status parameter value successfully.",
+        "error": false,
+        "data": {
+          "ecuStatusParamValue": {
+            "ecuName": "BCM",
+            "ecuStatusParam": "Door Switch Rear Left Door",
+            "ecuParamState": "Closed "
+          },
+          "dllCallMethod": "ReadDatabyidentifier"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:55:09 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "fetchEcuActuatorParamOptions",
+      "page": "/actuator-io",
+      "action": "drop down",
+      "dllCallMethod": "GetIOFormula",
+      "ecuActuatorParameter": {
+        "ecuName": "BCM",
+        "actuatorTestParam": "Front Wiper"
+      }
+    },
+    "response": {
+      "event": "replyEcuActuatorParamOptions",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU actuator parameter options successfully.",
+        "error": false,
+        "data": {
+          "ecuActuatorParameterOptions": {
+            "ecuName": "BCM",
+            "actuatorTestParam": "Front Wiper",
+            "action": [
+              "Deactivate",
+              "Activate"
+            ],
+            "condition": [
+              "Ignition on",
+              "Parking brake engaged",
+              "No accessories to be switched ON.",
+              "Engine off"
+            ],
+            "actuatorTestDescription": [
+              "Front wiper will be activated for 3 wiping cycles and then turned off."
+            ],
+            "actuatorActivationMethod": [
+              "Activate and deactivate buttons to be displayed.",
+              "Clicking on activate button will start the routine. The button will be disabled till routine is completed.",
+              "Clicking on deactivate button will stop the routine.",
+              "Deactivate button will stay disabled until activate button is disabled. It will be enabled only after the activate button is disabled."
+            ],
+            "actuatorTestTimeDuration": "10 seconds"
+          },
+          "dllCallMethod": "GetIOFormula"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:55:33 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "fetchEcuActuatorParamResponse",
+      "page": "/actuator-io",
+      "action": "Activate",
+      "dllCallMethod": "ReadIOControl",
+      "ecuActuatorParameter": {
+        "ecuName": "BCM",
+        "actuatorTestParam": "Front Wiper"
+      },
+      "ecuActuatorState": "Activate"
+    },
+    "response": {
+      "event": "replyEcuActuatorParamResponse",
+      "data": {
+        "status": 200,
+        "message": "Retrieved vehicle ECU actuator IO response successfully.",
+        "error": false,
+        "data": {
+          "dllCallMethod": "ReadIOControl",
+          "ecuActuatorResponse": {
+            "ecuName": "BCM",
+            "actuatorTestParam": "Front Wiper",
+            "ecuActuatorState": "Activate",
+            "ecuActuatorResponse": "True",
+            "ecuActuatorMessage": "Front wiper Activated"
+          }
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:55:44 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "http://192.168.1.179:32730//dtd-auth/vehicle/get-routine-tyre",
+      "page": "/routines",
+      "action": "drop down",
+      "ecuName": "ENGINE",
+      "parameter": "Injector Code Learning"
+    },
+    "response": {
+      "event": "http://192.168.1.179:32730//dtd-auth/vehicle/get-routine-tyre",
+      "data": {
+        "status": 200,
+        "data": {
+          "routineDataList": {
+            "Injector_1": "INJ39UT",
+            "Injector_2": "123E8u67",
+            "Injector_3": "22S67H87",
+            "Injector_4": "Ie546456"
+          }
+        },
+        "message": "Routine injector data has been fetched successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:56:08 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "http://192.168.1.179:32730//dtd-auth/vehicle/routine",
+      "page": "/routines",
+      "action": "Register Code",
+      "ecuName": "ENGINE",
+      "parameter": "Injector Code Learning",
+      "Injector_1": {
+        "beforeUpdate": "INJ39UT",
+        "afterUpdate": "INJ40ZD"
+      }
+    },
+    "response": {
+      "event": "http://192.168.1.179:32730//dtd-auth/vehicle/routine",
+      "data": {
+        "status": 200,
+        "message": "Routine injector data has been saved successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:56:15 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "http://192.168.1.179:32730//dtd-auth/vehicle/get-vehicle-software",
+      "page": "/reprogramming-flashing",
+      "action": "initial call"
+    },
+    "response": {
+      "event": "http://192.168.1.179:32730//dtd-auth/vehicle/get-vehicle-software",
+      "data": {
+        "status": 200,
+        "data": {
+          "vehicleSoftwareList": [
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "ABS",
+              "Hardware_Part_Number": "FM298033H004C",
+              "Cloud_Software_Part_Number": "23840211IR",
+              "Cloud_Software_Version_Number": "1.1.4",
+              "Stack_Software_Part_Number": "FM298033S004G",
+              "Stack_Software_Version_Number": "1.1.4"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "BCM",
+              "Hardware_Part_Number": "FM298033H003C",
+              "Cloud_Software_Part_Number": "12398774IU",
+              "Cloud_Software_Version_Number": "1.4.5",
+              "Stack_Software_Part_Number": "FM298033S003G",
+              "Stack_Software_Version_Number": "1.4.5"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "CLUSTER",
+              "Hardware_Part_Number": "FM298033H002C",
+              "Cloud_Software_Part_Number": "79875630RT",
+              "Cloud_Software_Version_Number": "3.0.1",
+              "Stack_Software_Part_Number": "FM298033S002G",
+              "Stack_Software_Version_Number": "3.0.1"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "ENGINE",
+              "Hardware_Part_Number": "FM298033H005C",
+              "Cloud_Software_Part_Number": "20985763TT",
+              "Cloud_Software_Version_Number": "1.0.2",
+              "Stack_Software_Part_Number": "FM298033S005G",
+              "Stack_Software_Version_Number": "1.0.2"
+            },
+            {
+              "VIN_Number": "VCF1ZBU2XPG001062",
+              "ECU_Name": "ACU",
+              "Hardware_Part_Number": "FM298033H001C",
+              "Cloud_Software_Part_Number": "223ULM20AL",
+              "Cloud_Software_Version_Number": "2.0.1",
+              "Stack_Software_Part_Number": "FM298033S001G",
+              "Stack_Software_Version_Number": "2.0.1"
+            }
+          ]
+        },
+        "message": "Stack vehicle software data has been retrieved successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:56:24 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "initiateEcuFlashing",
+      "page": "/reprogramming-flashing",
+      "action": "Flash Now",
+      "dllCallMethod": "flashing_sequence",
+      "vechileDetails": {
+        "ecuName": "ABS",
+        "hardwarePartNo": "FM298033H004C",
+        "softwarePartNo": "FM298033S004G",
+        "stackSofrwareVersion": "1.1.4"
+      }
+    },
+    "response": {
+      "event": "replyEcuFlashing",
+      "data": {
+        "status": 200,
+        "error": false,
+        "data": {
+          "ecuFlashingStatus": "Pre-Programming startPositive101267010FA1F2D821D6719529B4CE0D227DBDCDAF8FCCCCPositivePre-Programming CompletedProgramming startPositivePositivePositivePositivePositive101267010FA1F2D821D6719529B4CE0D227DBDCDAF8FCCCCPositivePositivePositivePositivePositivePositiveProgramming completedPostPrograming startPositive101267010FA1F2D821D6719529B4CE0D227DBDCDAF8FCCCCPositivePositiveRe-Programming completed",
+          "dllCallMethod": "flashing_sequence",
+          "ecuName": "ABS"
+        }
+      }
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:56:52 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": null,
+    "request": {
+      "event": "https://apiservicediagnostics.bluebinaries.com/dtd-demo/get-vehicle-features",
+      "method": "POST",
+      "page": "/feature-enablement",
+      "action": "initial call",
+      "parameter": {
+        "VIN": "VIN-0012"
+      }
+    },
+    "response": {
+      "event": "https://apiservicediagnostics.bluebinaries.com/dtd-demo/get-vehicle-features",
+      "data": "Network Error"
+    }
+  },
+  {
+    "createAt": "1/24/2024, 6:57:06 PM",
+    "user": "Admin",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/24/2024, 6:50:51 PM",
+    "logoutAt": "1/24/2024, 6:57:06 PM",
+    "request": {},
+    "response": {
+      "event": "",
+      "data": {
+        "user": "admin",
+        "logoutAt": "1/24/2024, 6:57:06 PM",
+        "isLogout": true
+      }
+    }
+  }
+]
