@@ -385,5 +385,83 @@
         "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
       }
     }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:29 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "page": "/fault-management",
+      "action": "clear DTC",
+      "dllCallMethod": "clear DTC list",
+      "ecuName": "ABS"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/clear-ecu-dtc",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C1100-11",
+            "description": "Wheel speed sensor FL short circuit to ground",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3202-13",
+            "description": "Wheel speed sensor RL open circuit",
+            "dtcState": "Active fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C3567-29",
+            "description": "Brake pad temperature too high",
+            "dtcState": "Pending fault"
+          },
+          {
+            "ecuName": "ABS",
+            "diagnosticTroubleCode": "C0238-97",
+            "description": "Wheel speed mismatch",
+            "dtcState": "Active fault"
+          }
+        ],
+        "message": "Memorised DTCs has been cleared and retrieved active and pending DTCs Successfully"
+      }
+    }
+  },
+  {
+    "createAt": "1/31/2024, 1:07:38 PM",
+    "platform": "web",
+    "user": "Tauqueer",
+    "vin": "VCF1ZBU2XPG001062",
+    "loginAt": "1/31/2024, 1:06:51 PM",
+    "logoutAt": null,
+    "request": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "page": "/fault-management",
+      "action": "scan ECU",
+      "dllCallMethod": "DTC list",
+      "ecuName": "BCM"
+    },
+    "response": {
+      "url": "https://apiservicediagnostics.bluebinaries.com/dtd-vehicle-stack-communication/vehicle/ecu-dtc-list",
+      "data": {
+        "status": 200,
+        "data": [
+          {
+            "ecuName": "ENGINE",
+            "diagnosticTroubleCode": null,
+            "description": null,
+            "dtcState": "No DTC found"
+          }
+        ],
+        "message": "ECU Diagnostic Trouble Codes Retrieved Successfully"
+      }
+    }
   }
 ]
