@@ -1,0 +1,225 @@
+VERSION "1.1.0"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DU BMS MCU THC TEL IMU ADAS BCM CHS VDC INFO TUNER DBG TRIP LV VCU
+
+BO_ 1 TRIP_status: 64 TRIP
+ SG_ TRIP_start_time : 0|32@1+ (1,0) [0|0] "s" DBG
+ SG_ TRIP_end_time : 32|32@1+ (1,0) [0|0] "s" DBG
+ SG_ TRIP_driver_score : 64|7@1+ (1,0) [0|100] "%" DBG
+ SG_ TRIP_harsh_breaking_count : 71|4@1+ (1,0) [0|15] "" DBG
+ SG_ TRIP_harsh_acceleration_count : 75|4@1+ (1,0) [0|15] "" DBG
+ SG_ TRIP_idle_time : 79|7@1+ (1,0) [0|100] "%" DBG
+ SG_ TRIP_efficiency : 86|7@1+ (1,0) [0|100] "%" DBG
+
+BO_ 16 DU_status: 8 DU
+ SG_ DU_vehicle_speed : 0|16@1+ (0.01,0.0) [0.0|400.0] "kmph" DBG
+ SG_ DU_rpm : 16|16@1+ (1,0) [0|10000] "RPM" DBG
+ SG_ DU_charging_status : 32|1@1+ (1,0) [0|0] "" DBG
+ SG_ DU_gear : 33|3@1+ (1,0) [0|4] "" DBG
+ SG_ DU_motor_temp : 36|8@1+ (1,0) [-100|100] "C" DBG
+ SG_ DU_error_code : 44|9@1+ (1,0) [0|0] "" DBG
+ SG_ DU_single_trip_distance : 53|11@1+ (1,0) [0|0] "km" DBG
+
+BO_ 32 BMS_status: 8 BMS
+ SG_ BMS_state : 0|4@1+ (1,0) [0|0] "" DBG
+ SG_ BMS_soc : 4|10@1+ (0.1,0) [0|100] "%" DBG
+ SG_ BMS_soh : 14|10@1+ (0.1,0) [0|100] "%" DBG
+ SG_ BMS_bus_voltage : 24|13@1+ (0.1,0) [0|0] "V" DBG
+ SG_ BMS_bus_current : 37|13@1- (0.1,0) [0|0] "A" DBG
+ SG_ BMS_isolation : 50|12@1+ (1,0) [0|0] "kohm" DBG
+ 
+BO_ 33 BMS_cell_status: 8 BMS
+ SG_ BMS_max_cell_temp : 0|12@1- (0.1,0) [0|0] "C" DBG
+ SG_ BMS_max_cell_temp_id : 12|4@1+ (1.0,0) [0|0] "" DBG
+ SG_ BMS_min_cell_temp : 16|12@1- (0.1,0) [0|0] "C" DBG
+ SG_ BMS_min_cell_temp_id : 28|4@1+ (1.0,0) [0|0] "" DBG
+ SG_ BMS_max_cell_voltage : 32|9@1+ (0.01,0) [0|0] "V" DBG
+ SG_ BMS_max_cell_voltage_id : 41|4@1+ (1.0,0) [0|0] "" DBG
+ SG_ BMS_min_cell_voltage : 45|9@1+ (0.01,0) [0|0] "V" DBG
+ SG_ BMS_min_cell_voltage_id : 54|4@1+ (1.0,0) [0|0] "" DBG
+
+BO_ 34 LV_battery_Status: 7 LV
+ SG_ LV_soc : 0|10@1+ (0.1,0) [0|100] "%" DBG
+ SG_ LV_soh : 10|10@1+ (0.1,0) [0|100] "%" DBG
+ SG_ LV_voltage : 20|14@1+ (0.1,0) [0|0] "V" DBG
+ SG_ LV_current : 34|14@1+ (0.1,0) [0|0] "A" DBG
+ SG_ LV_temperature : 48|8@1- (1,0) [-100|100] "C" DBG
+
+BO_ 48 MCU_status: 8 MCU
+ SG_ MCU_motor_speed : 0|16@1+ (0.1,0) [0|0] "RPM" DBG
+ SG_ MCU_motor_avg_temp : 16|12@1- (0.1,0) [0|0] "C" DBG
+
+BO_ 49 VCU_status: 8 VCU
+ SG_ VCU_remaining_range : 0|10@1+ (1,0) [0|1500] "km" DBG
+ SG_ VCU_fuel_level : 10|7@1+ (1,0) [0|100] "%" DBG
+ SG_ VCU_ignition_status : 17|3@1+ (1,0) [0|2] "" DBG
+
+BO_ 64 THC_status: 8 THC
+ SG_ THC_ambient_temp : 0|8@1- (1,0) [-100|100] "C" DBG
+ SG_ THC_cabin_temp : 8|8@1- (1,0) [-100|100] "C" DBG
+ SG_ THC_blower_speed : 16|8@1+ (1,0) [0|100] "%" DBG
+ SG_ THC_evap_temp : 24|8@1- (1,0) [-100|100] "C" DBG
+
+BO_ 81 TEL_identity_0: 8 TEL
+ SG_ TEL_hw_version : 0|32@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_sw_version : 32|32@1+ (1,0) [0|0] "" DBG
+
+BO_ 82 TEL_identity_1: 8 TEL
+ SG_ TEL_serial_number : 0|64@1+ (1,0) [0|0] "" DBG
+
+BO_ 83 TEL_vehicle_identity_1: 8 TEL
+ SG_ TEL_du_hw_version : 0|8@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_du_sw_version : 8|8@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_bms_hw_version : 16|8@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_bms_sw_version : 24|8@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_mcu_hw_version : 32|8@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_mcu_sw_version : 40|8@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_imu_hw_version : 48|8@1+ (1,0) [0|0] "" DBG
+ SG_ TEL_imu_sw_version : 56|8@1+ (1,0) [0|0] "" DBG
+
+BO_ 84 TEL_time: 16 TEL
+ SG_ TEL_time : 0|56@1+ (1,0) [0|0] ""  DBG
+ SG_ TEL_time_signature : 56|64@1+ (1,0) [0|0] ""  DBG
+
+BO_ 96 IMU_acceleration: 8 IMU
+ SG_ IMU_acceleration_x : 0|12@1- (1.0,0) [0|0] "" DBG
+ SG_ IMU_acceleration_y : 12|12@1- (1.0,0) [0|0] "" DBG
+ SG_ IMU_acceleration_z : 24|12@1- (1.0,0) [0|0] "" DBG
+ SG_ IMU_acceleration_resolution : 36|4@1+ (1.0,0) [0|0] "" DBG
+
+BO_ 97 IMU_gyro: 8 IMU
+ SG_ IMU_roll : 0|16@1- (1,0) [0|0] "" DBG
+ SG_ IMU_pitch : 16|16@1- (1,0) [0|0] "" DBG
+ SG_ IMU_yaw : 32|16@1- (1,0) [0|0] "" DBG
+ SG_ IMU_gyroscope_resolution : 48|4@1+ (1.0,0) [0|0] "" DBG
+
+BO_ 112 ADAS_status: 8 ADAS
+ SG_ ADAS_steering_angle_req : 0|16@1+ (0.1,-1638.4) [-1638.4|1638.3] "deg" DBG
+ SG_ ADAS_vehicle_speed_req : 16|16@1+ (0.01,0.0) [0.0|400.0] "kph" DBG
+ SG_ ADAS_head_light_req : 32|3@1+ (1,0) [0|7] "" DBG
+ SG_ ADAS_haptic_req : 35|2@1+ (1,0) [0|3] "" DBG
+
+BO_ 113 ADAS_radar_status: 8 ADAS
+ SG_ ADAS_radar_object_height : 0|16@1- (0.1,0.0) [-200|200.0] "cm" DBG
+ SG_ ADAS_radar_object_long: 16|16@1- (0.1,0.0) [-200|200.0] "cm" DBG
+ SG_ ADAS_radar_object_lat : 32|16@1- (0.01,0.0) [-200|200.0] "cm" DBG
+ SG_ ADAS_radar_object_prob : 48|8@1+ (1,0) [0|100] "%" DBG
+
+BO_ 128 BCM_status: 4 BCM
+ SG_ BCM_vehicle_lock_state : 0|3@1+ (1,0) [0|3] "" DBG
+ SG_ BCM_headlight_state : 3|3@1+ (1,0) [0|4] "" DBG
+ SG_ BCM_liftgate_position : 6|16@1+ (0.1,0.0) [0.0|180.0] "degrees" DBG
+ SG_ BCM_driver_seat_position : 22|8@1+ (1,0) [0|100] "%" DBG
+ SG_ BCM_hazard_lamp_status : 30|2@1+ (1,0) [0|2] "" DBG
+
+BO_ 129 BCM_door_status: 1 BCM
+ SG_ BCM_door_driver_side_front : 0|2@1+ (1,0) [0|2] "" DBG
+ SG_ BCM_door_driver_side_rear : 2|2@1+ (1,0) [0|2] "" DBG
+ SG_ BCM_door_passenger_side_front : 4|2@1+ (1,0) [0|2] "" DBG
+ SG_ BCM_door_passenger_side_rear : 6|2@1+ (1,0) [0|2] "" DBG
+
+BO_ 130 BCM_belt_status: 1 BCM
+ SG_ BCM_belt_driver_side_front : 0|2@1+ (1,0) [0|2] "" DBG
+ SG_ BCM_belt_driver_side_rear : 2|2@1+ (1,0) [0|2] "" DBG
+ SG_ BCM_belt_passenger_side_front : 4|2@1+ (1,0) [0|2] "" DBG
+ SG_ BCM_belt_passenger_side_rear : 6|2@1+ (1,0) [0|2] "" DBG
+
+BO_ 144 CHS_status: 8 CHS
+ SG_ CHS_air_susp_height : 0|16@1+ (0.1,0.0) [0|400.0] "cm" DBG
+ SG_ CHS_vehicle_roll : 16|16@1- (0.1,0.0) [-180.0|180.0] "deg" DBG
+ SG_ CHS_vehicle_tilt : 32|16@1- (0.1,0.0) [-180.0|180.0] "deg" DBG
+ SG_ CHS_air_susp_target : 48|16@1+ (0.1,0.0) [0|400.0] "cm" DBG
+
+BO_ 160 VDC_status: 8 VDC
+ SG_ VDC_fl_wheel_speed : 0|16@1+ (0.01,0.0) [0.0|400.0] "kph" DBG
+ SG_ VDC_fr_wheel_speed : 16|16@1+ (0.01,0.0) [0.0|400.0] "kph" DBG
+ SG_ VDC_f_torque_req : 32|16@1+ (1.0,-1023.0) [-1023.0|1024.0] "Nm" DBG
+ SG_ VDC_r_torque_req  : 48|16@1+ (1.0,-1023.0) [-1023.0|1024.0] "Nm" DBG
+
+BO_ 176 INFO_status: 8 INFO
+ SG_ INFO_media_volume : 0|8@1+ (1,0) [0|100] "%" DBG
+ SG_ INFO_cabin_temp_req : 8|8@1- (1,0) [-100|100] "degC" DBG
+ SG_ INFO_display_brightness : 16|8@1+ (1,0) [0|100] "%" DBG
+ SG_ INFO_display_state : 24|2@1+ (1,0) [0|2] "" DBG
+
+BO_ 192 TUNER_status: 8 TUNER
+ SG_ TUNER_channel : 0|8@1+ (0.1,80) [80.0|105.0] "" DBG
+ SG_ TUNER_volume : 8|8@1+ (1,0) [0|100] "%" DBG
+ SG_ TUNER_state : 16|2@1+ (1,0) [0|2] "" DBG
+ SG_ TUNER_media_type : 18|3@1+ (1,0) [0|5] "" DBG
+
+BO_ 224 OBC_power: 8 OBC
+ SG_ OBC_mux M : 0|2@1+ (1,0) [0|0] "" DBG
+ SG_ OBC_port_status : 5|1@1+ (1,0) [0|0] "" DBG
+ SG_ OBC_overvoltage_fault m0 : 20|1@1+ (1,0) [0|0] "" DBG
+ SG_ OBC_overcurrent_fault m0 : 21|1@1+ (1,0) [0|0] "" DBG
+ SG_ OBC_output_voltage m0 : 24|13@1+ (0.1,0) [0|0] "V" DBG
+ SG_ OBC_output_current m0 : 37|13@1- (0.1,0) [0|0] "A" DBG
+ SG_ OBC_port_weld_fault m1 : 20|1@1+ (1,0) [0|0] "" DBG
+ SG_ OBC_internal_voltage m1 : 24|13@1+ (0.1,0) [0|0] "V" DBG
+ SG_ OBC_internal_current m1 : 37|13@1- (0.1,0) [0|0] "A" DBG
+
+BO_ 2415919120 OBC_status: 8 OBC
+ SG_ OBC_connector_state : 0|4@1+ (1,0) [0|2] "" DBG
+
+BO_ 2147483856 OBC_code: 8 OBC
+ SG_ OBC_connector_type : 0|2@1+ (1,0) [0|2] "" DBG
+
+BO_ 230 DU_odometer : 64 OBC
+ SG_ DU_total_distance : 0|32@1+ (1,0) [0|1000000000] "km" DBG
+ SG_ DU_trip_a_distance : 32|32@1+ (1,0) [0|1000000000] "km" DBG
+ SG_ DU_trip_b_distance : 64|32@1+ (1,0) [0|1000000000] "km" DBG
+
+VAL_ 16 DU_gear 0 "INVALID" 1 "PARK" 2 "REVERSE" 3 "NEUTRAL" 4 "DRIVE";
+VAL_ 16 DU_charging_status 0 "NOT CHARGING" 1 "CHARGING" ;
+VAL_ 32 BMS_state 0 "INVALID" 1 "INACTIVE" 2 "PRECHARGE" 3 "ACTIVE" 4 "CHARGE" ;
+VAL_ 49 VCU_ignition_status 0 "OFF" 1 "AC" 2 "ON";
+VAL_ 128 BCM_vehicle_lock_state 0 "INVALID" 1 "UNLOCKED" 2 "LOCKED" 3 "PARTIAL_UNLOCK";
+VAL_ 128 BCM_headlight_state 0 "INVALID" 1 "OFF" 2 "DAYTIME" 3 "ON" 4 "HIGH_BEAM";
+VAL_ 128 BCM_hazard_lamp_status 0 "INVALID" 1 "OFF" 2 "ON";
+VAL_ 129 BCM_door_driver_side_front 0 "INVALID" 1 "CLOSED" 2 "OPEN";
+VAL_ 129 BCM_door_driver_side_rear 0 "INVALID" 1 "CLOSED" 2 "OPEN";
+VAL_ 129 BCM_door_passenger_side_front 0 "INVALID" 1 "CLOSED" 2 "OPEN";
+VAL_ 129 BCM_door_passenger_side_rear 0 "INVALID" 1 "CLOSED" 2 "OPEN";
+VAL_ 130 BCM_belt_driver_side_front 0 "INVALID" 1 "OFF" 2 "ON";
+VAL_ 130 BCM_belt_driver_side_rear 0 "INVALID" 1 "OFF" 2 "ON";
+VAL_ 130 BCM_belt_passenger_side_front 0 "INVALID" 1 "OFF" 2 "ON";
+VAL_ 130 BCM_belt_passenger_side_rear 0 "INVALID" 1 "OFF" 2 "ON";
+VAL_ 176 INFO_display_state 0 "INVALID" 1 "ON" 2 "OFF";
+VAL_ 192 TUNER_state 0 "INVALID" 1 "ON" 2 "OFF";
+VAL_ 192 TUNER_media_type 0 "INVALID" 1 "FM" 2 "AM" 3 "CD" 4 "BLUETOOTH" 5 "XM";
+VAL_ 224 OBC_port_status 0 "CLOSED" 1 "OPEN";
+VAL_ 2415919120 OBC_connector_state 0 "INVALID" 1 "DISCONNECTED" 2 "CONNECTED";
